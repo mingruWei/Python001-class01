@@ -11,9 +11,15 @@
 
 6、scrapy:新建spiders:scrapy startproject spiders；
           创建爬虫文件movies.py：scrapy genspider movies maoyan.com
+          启动爬虫 'scrapy crawl movies'
 7、allowed_domains，设置允许访问的域名，需要注意。
+8、注意在setting.py中开启
+        1、USER_AGENT，请求头，否则无法发起请求
+        2、DOWNLOAD_DELAY 延时抓取
+        3、ITEM_PIPELINES 配置item pipelines，否则无法开启管道存储
 
 总结：1、vscode 工作区配置等，git 使用不熟练（理解还不深入，需要深入理解）
      2、网页爬虫，会遇到网站的反爬虫策略，可加入合适的headers,如cookie;
+     3、xpath用法需要多了解
       
 
