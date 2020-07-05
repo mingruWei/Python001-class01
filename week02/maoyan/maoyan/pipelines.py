@@ -32,6 +32,6 @@ class MaoyanPipeline:
         result.append(filmtype)
         result.append(releasetime)
         values = ",".join(result)
-        # db=ConnDB(dbInfo,sqls)
-        # db.insert(values,"maoyan_movie")
+        db=ConnDB(dbInfo,sqls)
+        db.insert(values,"maoyan_movie")
         return item
