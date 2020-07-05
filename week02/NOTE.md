@@ -22,5 +22,5 @@
 
 7、WebDriver模拟浏览器行为，模拟登录获取登录cookie,模拟javascript点击事件等javascript行为，而不是发送http请求，pip install selenium
 
-8、需要下载chromdriver，webdriver和chrome之间需要的驱动，下载后放在.venv/bin目录下，注意下载不同的操作系统版本。
+8、需要下载chromdriver，webdriver和chrome之间需要的驱动，下载后放在.venv/bin（windows  ./venv/Scripts）目录下，注意下载不同的操作系统版本。
 
