@@ -1,4 +1,5 @@
 学习笔记
+
 1、python 虚拟环境 python -m venv .venv
 
 2、配置mysql，window安装mysql,修改root密码，pymysql连接mysql,insert 时需要注意指定字段，以及date的插入格式为20200701，无需引号，而字符串需要加上引号"'"
