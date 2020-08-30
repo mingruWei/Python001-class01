@@ -1,9 +1,6 @@
 学习笔记
 
-1、
-__getattribute__
-
-__getattr__
+1、__getattribute__、__getattr__
 
 异同：
 • 都可以对实例属性进行获取拦截
