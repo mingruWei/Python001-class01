@@ -37,7 +37,7 @@ def map_diy(func,*iterators):
 
 print(list(map_diy(square,[1,2,3,4,5])))
 
-print(list(map(sum,[1,2,3,4,5],[2,4,6,8,10])))
+print(list(map_diy(sum,[1,2,3,4,5],[2,4,6,8,10])))
 
 
 '''
