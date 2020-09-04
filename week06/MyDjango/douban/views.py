@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import T1
 from django.db.models import Avg
+from django.core import serializers
+
 # Create your views here.
 
 # 三星级以上电影短评
@@ -48,7 +50,12 @@ def books_short(request):
     # return render(request, 'douban.html', locals())
     return render(request, 'result.html', locals())
 
+def search(request, **kwargs):
 
+    shorts =  T1.objects.filter(short__contains=kwargs['name'])
+
+    ret = serializers.serialize("json", shorts)
+    return HttpResponse(ret)
 
 
 
