@@ -50,6 +50,7 @@ def books_short(request):
     # return render(request, 'douban.html', locals())
     return render(request, 'result.html', locals())
 
+#搜索
 def search(request, **kwargs):
 
     shorts =  T1.objects.filter(short__contains=kwargs['name'])
