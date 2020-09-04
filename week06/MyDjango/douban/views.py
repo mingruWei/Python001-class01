@@ -25,6 +25,14 @@ def books_short_star(request):
 
     return render(request, 'result_star.html', locals())
 
+#搜索短评
+def search(request, **kwargs):
+
+    shorts =  T1.objects.filter(short__contains=kwargs['name'])
+
+    ret = serializers.serialize("json", shorts)
+    return HttpResponse(ret)
+
 def books_short(request):
     ###  从models取数据传给template  ###
     shorts = T1.objects.all()
@@ -50,13 +58,7 @@ def books_short(request):
     # return render(request, 'douban.html', locals())
     return render(request, 'result.html', locals())
 
-#搜索短评
-def search(request, **kwargs):
 
-    shorts =  T1.objects.filter(short__contains=kwargs['name'])
-
-    ret = serializers.serialize("json", shorts)
-    return HttpResponse(ret)
 
 
 
