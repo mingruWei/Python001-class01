@@ -1,0 +1,3 @@
+crontab -e
+
+30 6 * * * cd /home/week10/smzdm && scrapy crawl zhinengshouji -o zhinengshouji.json
